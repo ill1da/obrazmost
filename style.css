@@ -78,17 +78,17 @@ header {
     align-items: center;
     display: flex
 }
-.bar-menu.bar-donate {
+.bar-menu.bar-profile {
     color: #FFFFFF;
 }
 
 .button {
+    height: max-content;
     color: #000000;
     text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
     background-color: transparent;
-    border: 1px solid #000000;
     border-radius: 1000px;
     justify-content: center;
     margin: 0;
@@ -99,6 +99,7 @@ header {
     text-decoration: none;
     transition: border-color .2s,color .2s,background-color .2s;
     position: relative;
+    cursor: pointer;
 }
 .button:hover {
     color: #FFFFFF;
@@ -106,17 +107,41 @@ header {
     border-color: #000000;
 }
 
-.button.secondary {
+.button.secondary{
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
     color: #FFFFFF;
     background: #7E51D6;
 }
 
-.donate {
+.profile-photo-name {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    color: #FFFFFF;
+}
+
+.button.secondary:hover  {
+    background: #875FD6;
+}
+
+.profile {
     max-width: 100%; height: 100%;
     display: inline-block;
     cursor: pointer;
+    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: baseline;
+    padding: 1rem 1.25rem;
+}
+
+.profile-photo {
+    width: 2rem; height: 2rem;
+    background-image: url(./source/kandinsky.png);
+    border-radius: 1000px;
+    background-position: center center;
+    background-size: cover;
 }
 
 .main-wrapper {
@@ -166,7 +191,7 @@ header {
     border-radius: 1000px;
     align-items: center;
     padding: 0.5rem 0.75rem;
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 100%;
     text-decoration: none;
@@ -177,37 +202,148 @@ header {
 .label-text {
     color: #17181a;
     background-color: #fff;
-    border-color: transparent
+    border-color: transparent;
 }
 
-.slide-text, #emoji{
+.slide-text {
     font-size: 3vw;
     font-weight: 400;
     line-height: 110%;
     color: #FFFFFF;
 }
 
-#emoji {
-    position:absolute;
-    color: #555;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-    transition: 0.2s ease-in-out;
-}
-#emoji:hover {
-    cursor: pointer;
-    text-align: right;
-    font-size: 3.1vw;
-    transition: 0.2s ease-in-out;
-}
 canvas {
     position: absolute;
     z-index: 10;
 }
-.right-slide {
-    /* background: url(./MAIN-source/texture.jpg); */
+
+.statistic {
+    margin-top: 1rem;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+}
+
+.card {
+    background-color: #FFFFFF;
+    border-radius: 2rem;
+    position: relative;
+    padding: 3rem;
+}
+
+
+.heading-style-h1 {
+    font-family: Montserrat;
+    font-size: 4vw;
+    font-weight: 400;
+    line-height: 110%;
+    margin-bottom: 8rem;
+}
+
+.heading-style-h3 {
+    font-family: Montserrat;
+    font-size: 2.25vw;
+    font-weight:400;
+    line-height: 120%;
+}
+
+.card-text {
+    width: fit-content;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.services-nav {
+    margin-top: 1rem;
+    grid-column-gap: .75rem;
+    grid-row-gap: .75rem;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+}
+
+.services-nav-item {
+    background-color: #fff;
+    border-radius: 500px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+.text-meta {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.card-role {
+    margin-top: 1rem;
+    padding: 3rem;
+    background: #FFFFFF;
+    border-radius: 2rem;
+}
+
+.card-role-title {
+    margin-bottom: 8rem;
+}
+
+.role-text-title {
+    color: #FFFFFF;
+    background: #7E51D6;
+}
+
+.slide-text.role-text {
+    color: #131110;
+}
+
+.choose-your-role {
+    margin-top: 1rem;
+    width: 100%;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+}
+
+.image-wrapper {
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+    height: auto; width: 100%;
+    aspect-ratio: 3/4;
+    background: transparent;
+    background-position: center center;
+    background-size: cover;
+}
+
+#student {
+    background-image: url(./source/kandinsky-student.png);
+}
+#professor {
+    background-image: url(./source/kandinsky-professor.png);
+}
+#businessman {
+    background-image: url(./source/kandinsky-businessman.png);
+}
+
+.img-plash {
+    position: absolute;
+    background: #7E51D6;
+    color: #FFFFFF;
+    top: 0;
 }
